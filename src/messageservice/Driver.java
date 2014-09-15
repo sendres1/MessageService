@@ -56,12 +56,25 @@ public class Driver {
 		// Comment this out (and uncomment preceeding reader/writer)
 		// to see how switching objects causes no problems with
 		// Copier class because it's Polymorphic!!!
-		Reader reader = new FileReader();
-		Writer writer = new GuiWriter();
-		
+            
+//    1,3         uncomment code, data.txt doesn't exist            
+//		Reader reader = new FileReader();
+//		Writer writer = new GuiWriter();
+            
+//  2,4 lets first try to create a file  sucessful, now uncomment above
+//                Reader reader = new KeyboardReader();
+//                Writer writer = new FileWriter();
+                
 		// Copy from reader to writer
 		// Notice that Copier is NOT dependent on implementation of reader/writer
-		// (it is not rigid, fragile or immobile)
+           // (it is not rigid, fragile or immobile)
+            
+ //  6 try writing to the console
+            Reader reader = new FileReader();
+		Writer writer = new ConsoleWriter();
+            
+            
+            
 		Copier copier = new Copier( reader, writer );
 		copier.copy();
 		

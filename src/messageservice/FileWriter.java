@@ -25,8 +25,9 @@ public class FileWriter implements Writer {
 	 */
 	public void writeln(String line) {
 		boolean append = false;
-		File data = new File(File.separatorChar + "Temp" + 
-			  File.separatorChar + "datacopy.txt");
+	//	File data = new File(File.separatorChar + "Temp" + 
+	//		  File.separatorChar + "data.txt");
+                File data = new File(File.separator + "data.txt");
 		PrintWriter out = null;
 			  
 		// This is where we setup our streams (append = false means overwrite)
