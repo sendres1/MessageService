@@ -42,11 +42,8 @@ package messageservice;
  * that the program has created "datacopy.txt" which contains a copy of the line 
  * of text in "data.txt".
  * 
- * @author  Jim Lombardo, WCTC Lead Java Instructor
- * @version 1.02
- * @see     Driver for run instructions and info about design rules
- * @see     DependentCopy project for a poor design
  */
+
 public class Driver {
 
 	public static void main(String[] args) {
