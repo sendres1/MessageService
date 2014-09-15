@@ -14,7 +14,7 @@ import java.util.Scanner;
  *
  * @author sendres1
  */
-public class KeyboardReader implements Reader{
+public class MessageKeyboardReader implements MessageReader{
     
 
 	/**

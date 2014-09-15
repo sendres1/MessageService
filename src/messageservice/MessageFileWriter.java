@@ -16,7 +16,7 @@ import java.io.*;
  * @author sendres1
  */
 
-public class FileWriter implements Writer {
+public class MessageFileWriter implements MessageWriter {
 
 	/**
 	 * Write a line of input to a file "c:\temp\datacopy.txt"
@@ -31,10 +31,10 @@ public class FileWriter implements Writer {
 		PrintWriter out = null;
 			  
 		// This is where we setup our streams (append = false means overwrite)
-		// new java.io.FileWriter() creates the file if doesn't exit
+		// new java.io.MessageFileWriter() creates the file if doesn't exit
 		try {
-			// make sure we differentiate between java.io.FileWriter
-			// class and this custom FileWriter class
+			// make sure we differentiate between java.io.MessageFileWriter
+			// class and this custom MessageFileWriter class
 			out = new PrintWriter(
 						new BufferedWriter(
 						new java.io.FileWriter(data, append) ) );

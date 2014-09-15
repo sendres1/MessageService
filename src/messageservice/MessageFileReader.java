@@ -14,7 +14,7 @@ import java.io.*;
  * @author sendres1
  */
 
-public class FileReader implements Reader {
+public class MessageFileReader implements MessageReader {
 	private boolean lineReadFlag = false;
 	
 	/**
@@ -36,8 +36,8 @@ public class FileReader implements Reader {
 			  
 		try {
 			if ( data.exists() ){
-				// make sure we differentiate between java.io.FileReader
-				// class and this custom FileReader class
+				// make sure we differentiate between java.io.MessageFileReader
+				// class and this custom MessageFileReader class
 				in = new BufferedReader( new java.io.FileReader(data) );
 				line = in.readLine();
 				in.close();

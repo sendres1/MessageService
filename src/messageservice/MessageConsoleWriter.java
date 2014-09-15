@@ -11,7 +11,7 @@ package messageservice;
  *
  * @author sendres1
  */
-public class ConsoleWriter implements Writer {
+public class MessageConsoleWriter implements MessageWriter {
 	
 	/**
 	 * Write a line of text to the console.

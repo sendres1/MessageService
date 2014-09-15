@@ -1,7 +1,7 @@
 /*
  * This class has only dependencies to abstractions, not to details 
  * (concrete classes). See how the
- * Copier method does not depend on any specific concrete class.
+ * MessageManager method does not depend on any specific concrete class.
  * This is called loose coupling and it makes classes like this one
  * more flexible and easier to reuse with other programs. This is a classic
  * example of the Dependency Inversion Principle (DIP) as well as the
@@ -14,20 +14,20 @@ package messageservice;
  *
  * @author sendres1
  */
-public class Copier {
+public class MessageManager {
     
-    	private Reader reader;
-	private Writer writer;
+    	private MessageReader reader;
+	private MessageWriter writer;
 	
 	/**
-	 * Get a Reader and Writer object (interface types). Copying
+	 * Get a MessageReader and MessageWriter object (interface types). Copying
 	 * ability is open to any number of implementations that implement 
 	 * those interfaces.
          * 
          * Both the Dependency Inversion Principle (DIP) and the Liskov
          * Substitution Principle are highlighted here.
 	 */
-	public Copier( Reader reader, Writer writer ) {
+	public MessageManager( MessageReader reader, MessageWriter writer ) {
 		this.reader = reader;
 		this.writer = writer;
 	}
