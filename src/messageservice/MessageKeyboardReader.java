@@ -22,8 +22,9 @@ public class MessageKeyboardReader implements MessageReader{
 	 * 
 	 * @return a String representing one line of input.
 	 */
-	public String readln() {
-            System.out.println("Please enter some text, then press return:");
+        @Override
+	public String getmessage() {
+            System.out.println("Please enter a message, then press return:");
 
             Scanner input = new Scanner(System.in);
             return input.nextLine();

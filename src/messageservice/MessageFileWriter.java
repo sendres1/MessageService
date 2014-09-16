@@ -23,7 +23,8 @@ public class MessageFileWriter implements MessageWriter {
 	 * 
 	 * @see Writer#writeln()
 	 */
-	public void writeln(String line) {
+        @Override
+	public void writemessage(String line) {
 		boolean append = false;
 	//	File data = new File(File.separatorChar + "Temp" + 
 	//		  File.separatorChar + "data.txt");

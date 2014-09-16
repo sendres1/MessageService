@@ -22,6 +22,6 @@ public interface MessageReader {
     
     // you do not need the "abstract" keyword because it is implicit
 	// just implement this interface and create your own derived class implementation
-	public abstract String readln();
+	public abstract String getmessage();
     
 }

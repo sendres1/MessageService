@@ -19,8 +19,10 @@ public class MessageConsoleWriter implements MessageWriter {
 	 * @param line - a String representing one line of text.
 	 * @see Writer#writeln()
 	 */
-	public void writeln( String line ) {
-            System.out.println("Here is the text you entered, which I've copied below.");
+    
+        @Override
+	public void writemessage( String line ) {
+            System.out.println("Here is the acquired message below.");
             System.out.println( line );
 	}
 }

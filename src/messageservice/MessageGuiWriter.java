@@ -21,7 +21,8 @@ public class MessageGuiWriter implements MessageWriter {
 	 * @param line - a String representing one line of text.
 	 * @see Writer#writeln()
 	 */
-	public void writeln( String line ) {
+        @Override
+	public void writemessage( String line ) {
             JOptionPane.showMessageDialog(null, line);
 	}
 }

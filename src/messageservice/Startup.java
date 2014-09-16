@@ -39,7 +39,7 @@ package messageservice;
  When using MessageFileReader and FileWriter, make sure you have a plain text file 
  (use Notepad to create one) named "data.txt" and containing one line of text. 
  Store this file in c:\temp. Now run the program. Go back to c:\temp and notice 
- that the program has created "datacopy.txt" which contains a copy of the line 
+ that the program has created "datacopy.txt" which contains a acquiresend of the line 
  of text in "data.txt".
  * 
  */
@@ -58,8 +58,8 @@ public class Startup {
 		// MessageManager class because it's Polymorphic!!!
             
 //    2         uncomment code, data.txt doesn't exist            
-		MessageReader reader = new MessageFileReader();
-		MessageWriter writer = new MessageGuiWriter();
+//		MessageReader reader = new MessageFileReader();
+//		MessageWriter writer = new MessageGuiWriter();
             
 //  1,3 lets first try to create a file  sucessful, now uncomment above
 //                MessageReader reader = new MessageKeyboardReader();
@@ -70,15 +70,15 @@ public class Startup {
            // (it is not rigid, fragile or immobile)
             
  //  4 try writing to the console
-//            MessageReader reader = new MessageFileReader();
-//		MessageWriter writer = new MessageConsoleWriter();
+            MessageReader reader = new MessageFileReader();
+		MessageWriter writer = new MessageConsoleWriter();
             
             
             
 		MessageManager copyit = new MessageManager( reader, writer );
-		copyit.copy();
+		copyit.acquiresend();
 		
 		// Send end of program message
-		System.out.println("Program ended. Line of reader input copied successfully to writer output.");
+		System.out.println("Program ended.");
 	}
 }
