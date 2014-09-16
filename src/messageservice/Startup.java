@@ -58,20 +58,20 @@ public class Startup {
 		// MessageManager class because it's Polymorphic!!!
             
 //    1,3         uncomment code, data.txt doesn't exist            
-//		MessageReader reader = new MessageFileReader();
-//		MessageWriter writer = new GuiWriter();
+		MessageReader reader = new MessageFileReader();
+		MessageWriter writer = new MessageGuiWriter();
             
 //  2,4 lets first try to create a file  sucessful, now uncomment above
-//                MessageReader reader = new KeyboardReader();
-//                MessageWriter writer = new FileWriter();
+//                MessageReader reader = new MessageKeyboardReader();
+//                MessageWriter writer = new MessageFileWriter();
                 
 		// Copy from reader to writer
 		// Notice that MessageManager is NOT dependent on implementation of reader/writer
            // (it is not rigid, fragile or immobile)
             
  //  6 try writing to the console
-            MessageReader reader = new MessageFileReader();
-		MessageWriter writer = new MessageConsoleWriter();
+//            MessageReader reader = new MessageFileReader();
+//		MessageWriter writer = new MessageConsoleWriter();
             
             
             
