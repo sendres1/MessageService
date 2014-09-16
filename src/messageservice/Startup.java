@@ -57,11 +57,11 @@ public class Startup {
 		// to see how switching objects causes no problems with
 		// MessageManager class because it's Polymorphic!!!
             
-//    1,3         uncomment code, data.txt doesn't exist            
+//    2         uncomment code, data.txt doesn't exist            
 		MessageReader reader = new MessageFileReader();
 		MessageWriter writer = new MessageGuiWriter();
             
-//  2,4 lets first try to create a file  sucessful, now uncomment above
+//  1,3 lets first try to create a file  sucessful, now uncomment above
 //                MessageReader reader = new MessageKeyboardReader();
 //                MessageWriter writer = new MessageFileWriter();
                 
@@ -69,7 +69,7 @@ public class Startup {
 		// Notice that MessageManager is NOT dependent on implementation of reader/writer
            // (it is not rigid, fragile or immobile)
             
- //  6 try writing to the console
+ //  4 try writing to the console
 //            MessageReader reader = new MessageFileReader();
 //		MessageWriter writer = new MessageConsoleWriter();
             
