@@ -75,8 +75,8 @@ public class Startup {
             
             
             
-		MessageManager copier = new MessageManager( reader, writer );
-		copier.copy();
+		MessageManager copyit = new MessageManager( reader, writer );
+		copyit.copy();
 		
 		// Send end of program message
 		System.out.println("Program ended. Line of reader input copied successfully to writer output.");
