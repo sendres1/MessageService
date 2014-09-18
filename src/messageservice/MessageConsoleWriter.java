@@ -21,8 +21,8 @@ public class MessageConsoleWriter implements MessageWriter {
 	 */
     
         @Override
-	public void writemessage( String line ) {
+	public void writeMessage( String msg ) {
             System.out.println("Here is the acquired message below.");
-            System.out.println( line );
+            System.out.println( msg );
 	}
 }

@@ -76,7 +76,7 @@ public class Startup {
             
             
 		MessageManager copyit = new MessageManager( reader, writer );
-		copyit.acquiresend();
+		copyit.acquireSend();
 		
 		// Send end of program message
 		System.out.println("Program ended.");

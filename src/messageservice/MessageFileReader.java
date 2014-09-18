@@ -24,7 +24,7 @@ public class MessageFileReader implements MessageReader {
      * @see Reader#readln()
      */
     @Override
-    public String getmessage() {
+    public String getMessage() {
 // Do this if locating data file in project 
 //	File data = new File("build" + File.separator + "classes" 
 //                        + File.separator + "data.txt");
@@ -34,18 +34,18 @@ public class MessageFileReader implements MessageReader {
         File data = new File(File.separator + "data.txt");
 
         BufferedReader in = null;
-        String line = null;
+        String msg = null;
 
         try {
             if (data.exists()) {
                 // make sure we differentiate between java.io.MessageFileReader
                 // class and this custom MessageFileReader class
                 in = new BufferedReader(new java.io.FileReader(data));
-                line = in.readLine();
+                msg = in.readLine();
                 in.close();
             } else {
                 System.out.println("File not found - data.txt");
-                line = null;
+                msg = null;
             }
         } catch (IOException ioe) {
             try {
@@ -64,7 +64,7 @@ public class MessageFileReader implements MessageReader {
             return null;
         } else {
             lineReadFlag = true;
-            return line;
+            return msg;
         }
     }
 

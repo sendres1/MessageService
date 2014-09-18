@@ -1,5 +1,5 @@
 //*
-// * A simple class that demonstrates a capability to write a line of 
+// * A simple class that demonstrates a capability to write a msg of 
 // * text to a GUI Window. Notice this class is derived from the 
 // * interface <code>MessageWriter</code>, which is an abstraction of these details.
 // * 
@@ -16,13 +16,13 @@ import javax.swing.JOptionPane;
 public class MessageGuiWriter implements MessageWriter {
 	
 	/**
-	 * Write a line of text to a GUI Window.
+	 * Write a msg of text to a GUI Window.
 	 * 
-	 * @param line - a String representing one line of text.
+	 * @param msg - a String representing one msg of text.
 	 * @see Writer#writeln()
 	 */
         @Override
-	public void writemessage( String line ) {
-            JOptionPane.showMessageDialog(null, line);
+	public void writeMessage( String msg ) {
+            JOptionPane.showMessageDialog(null, msg);
 	}
 }

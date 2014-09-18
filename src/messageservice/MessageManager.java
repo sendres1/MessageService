@@ -49,12 +49,12 @@ public class MessageManager {
     }
 
     /**
-     * Copy one line of input from reader to writer. Program ends when carriage
+     * Copy one msg of input from reader to writer. Program ends when carriage
      * return is entered. Notice how flexible this is due to polymorphism!
      */
-    public void acquiresend() {
-        String line = reader.getmessage();
-        writer.writemessage(line);
+    public void acquireSend() {
+        String msg = reader.getMessage();
+        writer.writeMessage(msg);
     }
 
 }

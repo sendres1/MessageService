@@ -19,12 +19,12 @@ import java.io.*;
 public class MessageFileWriter implements MessageWriter {
 
 	/**
-	 * Write a line of input to a file "c:\temp\datacopy.txt"
+	 * Write a msg line of input to a file "c:\temp\datacopy.txt"
 	 * 
 	 * @see Writer#writeln()
 	 */
         @Override
-	public void writemessage(String line) {
+	public void writeMessage(String msg) {
 		boolean append = false;
 	//	File data = new File(File.separatorChar + "Temp" + 
 	//		  File.separatorChar + "data.txt");
@@ -39,7 +39,7 @@ public class MessageFileWriter implements MessageWriter {
 			out = new PrintWriter(
 						new BufferedWriter(
 						new java.io.FileWriter(data, append) ) );
-			out.println(line);
+			out.println(msg);
 			out.close();
 			
 		} catch (IOException ioe) {

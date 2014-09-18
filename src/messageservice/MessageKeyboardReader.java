@@ -20,10 +20,10 @@ public class MessageKeyboardReader implements MessageReader{
 	/**
 	 * Reads characters from the keyboard until a carriage return is entered.
 	 * 
-	 * @return a String representing one line of input.
+	 * @return a String representing a message of 1 line.
 	 */
         @Override
-	public String getmessage() {
+	public String getMessage() {
             System.out.println("Please enter a message, then press return:");
 
             Scanner input = new Scanner(System.in);
